@@ -1,12 +1,12 @@
 #include"RadialNeuron.h"
 
-RadialNeuron::RadialNeuron(char *filename/*=GNUFile.txt*/,int dim/*=2*/)
+RadialNeuron::RadialNeuron(const char *filename/*=GNUFile.txt*/,int dim/*=2*/)
 {
 
     gpipe = popen("gnuplot -persist","w");
            if(!gpipe)
            {
-               exit -1;
+	     exit(-1);
            }
 
     dimension=dim;
@@ -81,7 +81,7 @@ int RadialNeuron::training(std::ifstream& f){
 
                 break;
             case 3:
-                sscanf(str.c_str(),"%lf %lf %lf %lf",inData[0],inData[1],inData[2],&inData[3]);
+                sscanf(str.c_str(),"%lf %lf %lf %lf",&inData[0],&inData[1],&inData[2],&inData[3]);
 
                 break;
             default: continue;

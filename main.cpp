@@ -1,12 +1,16 @@
 #include"main.h"
 
-int main(void){
+int main(int argc, char **argv){
 
+  printf("Radial Neuron trainer\n\n"
+	 "Input arguments [dimention] [optionaly: teacher's file name]\n"
+	 "Write 'e' to pass classify mode\n\n");
+  assert(argc>1);
 try
     {
 
-    int dim=2;
-    char *file="Dots2D.txt";
+      int dim=atoi(argv[1]);
+      const char *file= argc==3?argv[2]:"Dots2D.txt";
 
     RadialNeuron rn(file,dim);
 
@@ -24,11 +28,12 @@ try
         if(str==std::string("e"))
            break;
 
-             std::sscanf(str.c_str(),"%lf %lf",&x[0],&x[1]);
+	int n =std::sscanf(str.c_str(),"%lf %lf",&x[0],&x[1]);
 
         std::cout<<"classify >";
-        if(str.size()<3)
-                continue;
+
+        if(n<2)
+	  continue;
         rn.classify(x);
     }
 

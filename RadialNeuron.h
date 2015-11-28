@@ -23,34 +23,30 @@ private:
 
 
 public:
-    RadialNeuron(char *filename, int dim=2);
+    RadialNeuron(const char *filename, int dim=2);
     ~RadialNeuron();
 
     double classify(std::vector<double> v);
 
-    void plot_sigm()
-    {
+    void plot_sigm(){
         std::cout<<"Sigma is "<< sigm<<'\n';
     }
 
-    void plot_C()
-    {
+    void plot_C(){
         for(int i=0;i<dimension;++i)
             {
-            std::cout<<"x"<<i<<" = "<<C_N[i]<<"\t";
+	      std::cout<<"x"<<i<<" = "<<C_N[i]<<"\t";
             }
         std::cout<<'\n';
     }
 
 private:
 
-    bool is_ieee_nan(double m)
-    {
+    bool is_ieee_nan(double m){
         if(m==m)
             return false;
         else
             return true;
-
     }
 
     int training(std::ifstream& f);
