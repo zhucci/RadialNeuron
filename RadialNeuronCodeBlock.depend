@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1431619860 source:c:\users\asus\desktop\university\radialneuroncodeblock\main.cpp
+	"main.h"
+
+1430945926 
+
+1430030499 c:\users\asus\desktop\university\radialneuroncodeblock\main.h
+	<iostream>
+	<cstdlib>
+	"RadialNeuron.h"
+
+1431705545 ron.h"
+
+1431626014 c:\users\asus\desktop\university\radialneuroncodeblock\radialneuron.h
+	<iostream>
+	<fstream>
+	<cstdlib>
+	"point.h"
+	<cmath>
+	<sstream>
+	<string>
+
+1430945926 c:\users\asus\desktop\university\radialneuroncodeblock\point.h
+	<vector>
+
+1431705545 source:c:\users\asus\desktop\university\radialneuroncodeblock\radialneuron.cpp
+	"RadialNeuron.h"
+
+1431619860 source:/home/zhucci/Desktop/RadialNeuronCodeBlock/main.cpp
+	"main.h"
+
+1430030499 /home/zhucci/Desktop/RadialNeuronCodeBlock/main.h
+	<iostream>
+	<cstdlib>
+	"RadialNeuron.h"
+
+1431770341 /home/zhucci/Desktop/RadialNeuronCodeBlock/RadialNeuron.h
+	<iostream>
+	<fstream>
+	<cstdlib>
+	"point.h"
+	<cmath>
+	<sstream>
+	<string>
+
+1430945926 /home/zhucci/Desktop/RadialNeuronCodeBlock/point.h
+	<vector>
+
+1431705545 source:/home/zhucci/Desktop/RadialNeuronCodeBlock/RadialNeuron.cpp
+	"RadialNeuron.h"
+
